@@ -10,7 +10,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.strive.app",
+      "bundleIdentifier": "com.strive-Evhan.app",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Pour enregistrer vos parcours sportifs",
         "NSLocationAlwaysAndWhenInUseUsageDescription": "Pour le suivi GPS en arrière-plan",
