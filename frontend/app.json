@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "Strive",
+    "slug": "strive",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "strive",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.strive.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Pour enregistrer vos parcours sportifs",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Pour le suivi GPS en arrière-plan",
+        "NSLocationAlwaysUsageDescription": "Pour le suivi GPS écran éteint",
+        "NSPhotoLibraryUsageDescription": "Pour choisir une photo de profil",
+        "NSCameraUsageDescription": "Pour prendre une photo de profil",
+        "UIBackgroundModes": ["location"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0D0D0D"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.strive.app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-live-activity",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Pour suivre vos activités sportives en arrière-plan",
+          "locationAlwaysPermission": "Pour le suivi GPS continu",
+          "locationWhenInUsePermission": "Pour enregistrer vos parcours"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Pour choisir une photo de profil",
+          "cameraPermission": "Pour prendre une photo"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0D0D0D"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
